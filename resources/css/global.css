@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "anton-r";
+    src: url("../fonts/anton-r.ttf") format("truetype");
+}
+@font-face {
+    font-family: "futura-b";
+    src: url("../fonts/futura-b.ttf") format("truetype");
+}
+@font-face {
+    font-family: "futura-md-cd";
+    src: url("../fonts/futura-md-cd.ttf") format("truetype");
+}
+@font-face {
+    font-family: "stencil-ww2";
+    src: url("../fonts/stencil-ww2.ttf") format("truetype");
+}

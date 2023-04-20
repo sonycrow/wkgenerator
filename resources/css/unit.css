@@ -1,0 +1,215 @@
+div.unit,
+div.unittts {
+    position: relative;
+    top: 0;
+    left: 0;
+    width:  256px;
+    height: 256px;
+    background-size: contain;
+}
+
+div.unittts {
+    width:  288px;
+    height: 288px;
+    padding: 0 32px 32px 0;
+}
+
+div.backunit {
+    width:  256px;
+    height: 256px;
+}
+
+div.unittts-amazons    { background-color: rgb(211, 0, 0); }
+div.unittts-barbarians { background-color: rgb(2, 81, 234); }
+div.unittts-dwarves    { background-color: rgb(154, 154, 154); }
+div.unittts-elves      { background-color: rgb(61, 148, 35); }
+div.unittts-feudals    { background-color: rgb(152, 89, 26); }
+div.unittts-orcs       { background-color: rgb(225, 128, 16); }
+div.unittts-undead     { background-color: rgb(17, 17, 17); }
+div.unittts-chaos      { background-color: rgb(250, 250, 250); }
+div.unittts-werebeast  { background-color: rgb(250, 250, 250); }
+div.unittts-treasures  { background-color: rgb(250, 250, 250); }
+div.unittts-artifacts  { background-color: rgb(250, 250, 250); }
+
+div.unit-amazons    { background-color: rgb(211, 0, 0); }
+div.unit-barbarians { background-color: rgb(2, 81, 234); }
+div.unit-dwarves    { background-color: rgb(161, 191, 204); }
+div.unit-elves      { background-color: rgb(61, 148, 35); }
+div.unit-feudals    { background-color: rgb(227, 206, 156); }
+div.unit-orcs       { background-color: rgb(225, 128, 16); }
+div.unit-undead     { background-color: rgb(206, 206, 206); }
+div.unit-chaos      { background-color: rgb(33, 33, 33); }
+div.unit-werebeast  { background-color: rgb(255, 237, 0); }
+div.unit-treasures  { background-color: rgb(215, 233, 253); }
+div.unit-artifacts  { background-color: rgb(100, 59, 13); }
+
+div.art-amazons    { background-color: rgb(211, 0, 0); }
+div.art-barbarians { background-color: rgb(72, 156, 243); }
+div.art-dwarves    { background-color: rgb(161, 191, 204); }
+div.art-elves      { background-color: rgb(61, 148, 35); }
+div.art-feudals    { background-color: rgb(255, 243, 152); }
+div.art-orcs       { background-color: rgb(225, 128, 16); }
+div.art-undead     { background-color: rgb(206, 206, 206); }
+div.art-chaos      { background-color: rgb(33, 33, 33); }
+div.art-werebeast  { background-color: rgb(255, 237, 0); }
+div.art-treasures  { background-color: rgb(215, 233, 253); }
+div.art-artifacts  { background-color: rgb(100, 59, 13); }
+
+div.main-unit div.color-amazons    { color: rgb(255, 245, 85); }
+div.main-unit div.color-barbarians { color: rgb(255, 245, 85); }
+div.main-unit div.color-dwarves    { color: rgb(6, 41, 134); }
+div.main-unit div.color-elves      { color: rgb(255, 245, 85); }
+div.main-unit div.color-feudals    { color: rgb(93, 6, 6); }
+div.main-unit div.color-orcs    { color: rgb(0, 0, 0); }
+div.main-unit div.color-undead     { color: rgb(33, 32, 32); }
+div.main-unit div.color-chaos      { color: rgb(255, 255, 255); }
+div.main-unit div.color-werebeast  { color: rgb(166, 5, 5); }
+div.main-unit div.color-treasures  { color: rgb(162, 95, 27); }
+div.main-unit div.color-artifacts  { color: rgb(250, 250, 250); }
+
+div.main-unit div.color-treasures_silver_160 { color: rgb(115, 149, 166); }
+div.main-unit div.color-treasures_gold_159 { color: rgb(176, 131, 13); }
+div.main-unit div.color-treasures_gems_158 { color: rgb(5, 154, 154); }
+
+/* Extra units */
+div.unit-chinese    { background-color: rgb(175, 13, 50); }
+div.unit-egyptian   { background-color: rgb(175, 13, 50); }
+div.unit-greek      { background-color: rgb(175, 13, 50); }
+div.unit-hun        { background-color: rgb(175, 13, 50); }
+div.unit-japonese   { background-color: rgb(175, 13, 50); }
+div.unit-persian    { background-color: rgb(175, 13, 50); }
+div.unit-roman      { background-color: rgb(175, 13, 50); }
+div.main-unit div.color-chinese    { color: rgb(0, 0, 0); }
+div.main-unit div.color-egyptian   { color: rgb(0, 0, 0); }
+div.main-unit div.color-greek      { color: rgb(0, 0, 0); }
+div.main-unit div.color-hun        { color: rgb(0, 0, 0); }
+div.main-unit div.color-japonese   { color: rgb(0, 0, 0); }
+div.main-unit div.color-persian    { color: rgb(0, 0, 0); }
+div.main-unit div.color-roman      { color: rgb(0, 0, 0); }
+
+div.main-unit div.terrain-swamp    { background-image: url('../img/mov-swamp.png');    }
+div.main-unit div.terrain-forest   { background-image: url('../img/mov-forest.png');   }
+div.main-unit div.terrain-aquatic  { background-image: url('../img/mov-aquatic.png');  }
+div.main-unit div.terrain-city     { background-image: url('../img/mov-city.png');     }
+div.main-unit div.terrain-cleric   { background-image: url('../img/mov-cleric.png');   }
+div.main-unit div.terrain-desert   { background-image: url('../img/mov-desert.png');   }
+div.main-unit div.terrain-fly      { background-image: url('../img/mov-fly.png');      }
+div.main-unit div.terrain-mountain { background-image: url('../img/mov-mountain.png'); }
+
+div.main-unit div.name {
+    position: absolute;
+    margin-top: 2px;
+    margin-left: 31px;
+    font-family: Futura-Bold, futura-b, serif;
+    line-height: 32px;
+    font-size: 32px;
+}
+
+div.main-unit div.art {
+    position: absolute;
+    margin-top: 32px;
+    margin-left: 32px;
+    width:  192px;
+    height: 192px;
+    background-size: contain;
+    border: 2px solid black;
+}
+
+div.main-unit div.attack {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 170px;
+    width:  60px;
+    height: 40px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 8px;
+    text-align: center;
+    font-family: futura-b, serif;
+    line-height: 34px;
+    font-size: 36px;
+    color: rgb(176, 14, 14);
+}
+
+div.main-unit div.attack span.plus {
+    font-family: arial, serif;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 30px;
+}
+
+div.main-unit div.cost {
+    position: absolute;
+    margin-top: 186px;
+    margin-left: 20px;
+    width:  50px;
+    height: 50px;
+    background-color: rgb(232, 199, 60);
+    border: 3px solid black;
+    border-radius: 50px;
+    text-align: center;
+    font-family: futura-b, serif;
+    line-height: 44px;
+    font-size: 42px;
+    color: rgb(72, 33, 33);
+}
+
+div.main-unit div.move {
+    position: absolute;
+    margin-top: 194px;
+    margin-left: 170px;
+    width:  60px;
+    height: 40px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 8px;
+}
+
+div.main-unit div.move div.value {
+    position: absolute;
+    width:  24px;
+    height: 40px;
+    font-family: futura-b, serif;
+    text-align: center;
+    line-height: 34px;
+    font-size: 36px;
+    color: rgb(0, 0, 0);
+}
+
+div.main-unit div.move div.value-zero {
+    width: 54px;
+}
+
+div.main-unit div.terrain {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 22px;
+    margin-top: 1px;
+    width: 32px;
+    height: 32px;
+}
+
+div.main-unit div.step2,
+div.main-unit div.step3,
+div.main-unit div.step4 {
+    position: absolute;
+    font-size: 32px;
+}
+
+div.main-unit div.step2 {
+    margin-top: 108px;
+    margin-left: -12px;
+    transform: rotate(-90deg);
+}
+
+div.main-unit div.step3 {
+    margin-top: 210px;
+    margin-left: 80px;
+}
+
+div.main-unit div.step4 {
+    margin-top: 108px;
+    margin-left: 180px;
+    transform: rotate(-90deg);
+}
