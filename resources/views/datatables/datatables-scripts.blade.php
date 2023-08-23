@@ -1,5 +1,4 @@
 <script>
-
     function datatables(headers, elements) {
         return {
             headings: headers, // Cabeceras
@@ -95,16 +94,16 @@
      * @param text
      * @returns {string|null}
      */
-    function formatContent(text, dispatch) {
+    function formatContent(text) {
         if (text !== 0 && !text) return null;
 
         let str = String(text);
         return str
-            .replaceAll(/img:(.*),h:(\d*),w:(\d*)/gmi, "<img src='$1' height='$2' width='$3'/>")
-            .replaceAll(/img:(.*),w:(\d*),h:(\d*)/gmi, "<img src='$1' width='$2' height='$3'/>")
-            .replaceAll(/img:(.*),h:(\d*)/gmi,         "<img src='$1' height='$2'/>")
-            .replaceAll(/img:(.*),w:(\d*)/gmi,         "<img src='$1' width='$2'/>")
-            .replaceAll(/img:(.*)/gmi,                 "<img src='$1'/>")
+            .replaceAll(/img:(.*),h:(\d*),w:(\d*)/gmi, "<img src='$1' height='$2' width='$3' />")
+            .replaceAll(/img:(.*),w:(\d*),h:(\d*)/gmi, "<img src='$1' width='$2'  height='$3' />")
+            .replaceAll(/img:(.*),h:(\d*)/gmi,         "<img src='$1' height='$2' />")
+            .replaceAll(/img:(.*),w:(\d*)/gmi,         "<img src='$1' width='$2' @click=\"$dispatch('lightbox', { src: '$1' })\" class='cursor-pointer' />")
+            .replaceAll(/img:(.*)/gmi,                 "<img src='$1' />")
         ;
     }
 
@@ -121,11 +120,6 @@
             .replaceAll(/#biologic#/gmi,      "<span class='biologic'>&nbsp;&nbsp;</span>")
             .replaceAll(/#espectral#/gmi,     "<span class='espectral'>&nbsp;&nbsp;</span>")
             .replaceAll(/#dimensional#/gmi,   "<span class='dimensional'>&nbsp;&nbsp;</span>");
-    }
-
-    function eventDispatch(func, src, dispatch) {
-        console.log('hola');
-        dispatch(func, {imgModalSrc: src, imgModalDesc: 'Random Image One Description'});
     }
 
 </script>

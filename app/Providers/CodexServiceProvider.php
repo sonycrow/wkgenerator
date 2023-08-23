@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider;
 
 class CodexServiceProvider extends ServiceProvider
 {
-    protected static array $codex = [];
+    protected static array $codex;
 
     /**
      * Register services.
@@ -24,11 +24,10 @@ class CodexServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $codex = json_decode(Storage::disk('public')->get("codex.json"), true);
-        self::$codex = $codex['unit'];
+        self::$codex = json_decode(Storage::disk('public')->get("codex.json"), true)['unit'];
     }
 
-    static public function getUnit(int $id): array
+    public static function getUnit(int $id): array
     {
         foreach (self::$codex as $item) {
             if ($item['id'] == $id) {
@@ -39,7 +38,7 @@ class CodexServiceProvider extends ServiceProvider
         return array();
     }
 
-    static public function getUnits(string $faction = null): array
+    public static function getUnits(?string $faction = null): array
     {
         if (!$faction) return self::$codex;
 
@@ -53,15 +52,15 @@ class CodexServiceProvider extends ServiceProvider
         return $codex;
     }
 
-    static public function getArt(int $id): ?string
+    public static function getArt(int $id): ?string
     {
         $unit = self::getUnit($id);
         $art = strtolower($unit['faction'] . "_" . str_replace(" ", "_", $unit['name']));
 
-        if (file_exists(__DIR__ . "../../../resources/art/{$art}_{$id}.jpg")) {
+        if (file_exists(__DIR__ . "../../../resources/art/{$unit['universe']}/{$art}_{$id}.jpg")) {
             return "{$art}_{$id}";
         }
-        if (file_exists(__DIR__ . "../../../resources/art/{$art}.jpg")) {
+        if (file_exists(__DIR__ . "../../../resources/art/{$unit['universe']}/{$art}.jpg")) {
             return $art;
         }
 

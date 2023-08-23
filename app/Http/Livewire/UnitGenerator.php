@@ -2,16 +2,15 @@
 
 namespace App\Http\Livewire;
 
-use App\Providers\CodexServiceProvider;
 use Livewire\Component;
 
 class UnitGenerator extends Component
 {
-    public $faction = "-";
+    public string $faction = "-";
 
-    public $tts = false;
-    public $images = false;
-    public $download = false;
+    public bool $tts = false;
+    public bool $images = false;
+    public bool $download = false;
 
     /**
      * Vista del componente

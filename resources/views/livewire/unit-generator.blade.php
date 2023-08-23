@@ -7,7 +7,7 @@
                     x-on:change.debounce="generateImages"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-1"
                 >
-                    <option>·· ALL ··</option>
+                    <option>·· Wizard Kings ··</option>
                     <option value="amazons">Amazons</option>
                     <option value="barbarians">Barbarians</option>
                     <option value="dwarves">Dwarves</option>
@@ -19,6 +19,8 @@
                     <option value="chaos">Chaos</option>
                     <option value="artifacts">Artifacts</option>
                     <option value="treasures">Treasures</option>
+                    <option>·· Warhammer 40k ··</option>
+                    <option value="spacemarines">Space Marines</option>
                 </select>
             </label>
         </div>

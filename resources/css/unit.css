@@ -19,6 +19,7 @@ div.backunit {
     height: 256px;
 }
 
+/** Wizard Kings **/
 div.unittts-amazons    { background-color: rgb(211, 0, 0); }
 div.unittts-barbarians { background-color: rgb(2, 81, 234); }
 div.unittts-dwarves    { background-color: rgb(154, 154, 154); }
@@ -30,7 +31,10 @@ div.unittts-chaos      { background-color: rgb(250, 250, 250); }
 div.unittts-werebeast  { background-color: rgb(250, 250, 250); }
 div.unittts-treasures  { background-color: rgb(250, 250, 250); }
 div.unittts-artifacts  { background-color: rgb(250, 250, 250); }
+/** Warhammer 40K **/
+div.unittts-spacemarines { background-color: rgb(13, 64, 127); }
 
+/** Wizard Kings **/
 div.unit-amazons    { background-color: rgb(211, 0, 0); }
 div.unit-barbarians { background-color: rgb(2, 81, 234); }
 div.unit-dwarves    { background-color: rgb(161, 191, 204); }
@@ -42,7 +46,11 @@ div.unit-chaos      { background-color: rgb(33, 33, 33); }
 div.unit-werebeast  { background-color: rgb(255, 237, 0); }
 div.unit-treasures  { background-color: rgb(215, 233, 253); }
 div.unit-artifacts  { background-color: rgb(100, 59, 13); }
+/** Warhammer 40K **/
+div.unit-spacemarines { background-color: rgb(13, 64, 127); }
 
+/** Wizard Kings **/
+/*  Color de fondo usado dentro del recuadro donde está el arte  */
 div.art-amazons    { background-color: rgb(211, 0, 0); }
 div.art-barbarians { background-color: rgb(72, 156, 243); }
 div.art-dwarves    { background-color: rgb(161, 191, 204); }
@@ -55,6 +63,7 @@ div.art-werebeast  { background-color: rgb(255, 237, 0); }
 div.art-treasures  { background-color: rgb(215, 233, 253); }
 div.art-artifacts  { background-color: rgb(100, 59, 13); }
 
+/** Wizard Kings **/
 div.main-unit div.color-amazons    { color: rgb(255, 245, 85); }
 div.main-unit div.color-barbarians { color: rgb(255, 245, 85); }
 div.main-unit div.color-dwarves    { color: rgb(6, 41, 134); }
@@ -66,6 +75,8 @@ div.main-unit div.color-chaos      { color: rgb(255, 255, 255); }
 div.main-unit div.color-werebeast  { color: rgb(166, 5, 5); }
 div.main-unit div.color-treasures  { color: rgb(162, 95, 27); }
 div.main-unit div.color-artifacts  { color: rgb(250, 250, 250); }
+/** Warhammer 40K **/
+div.main-unit div.color-spacemarines { color: rgb(240, 240, 240); }
 
 div.main-unit div.color-treasures_silver_160 { color: rgb(115, 149, 166); }
 div.main-unit div.color-treasures_gold_159 { color: rgb(176, 131, 13); }

@@ -12,7 +12,7 @@
         <div @class(['name', "color-{$unit['faction']}", "color-{$unit['nameid']}"])>{{ Str::upper($unit['name']) }}</div>
 
         @if($unit['art'])
-            <div class="art art-{{$unit['faction']}}" style="background-image: url('{{ Vite::asset('resources/art/' . $unit['art'] . ".jpg") }}')"></div>
+            <div class="art art-{{ $unit['faction'] }}" style="background-image: url('{{ Vite::asset('resources/art/' . $unit['universe'] . "/" . $unit['art'] . ".jpg") }}')"></div>
         @endif
 
         @if($unit['steps'] >= 2)
@@ -43,7 +43,7 @@
         </div>
 
         @if($tts)
-            <div class="backunit unit-{{$unit['faction']}}"></div>
+            <div class="backunit unit-{{ $unit['faction'] }}"></div>
         @endif
     </div>
 

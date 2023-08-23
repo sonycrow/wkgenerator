@@ -1,18 +1,25 @@
 <div>
-    <div x-data="{ imgModal: false, imgModalSrc: '', imgModalDesc: '' }">
-        <template @img-modal.window="imgModal = true; imgModalSrc = $event.detail.imgModalSrc; imgModalDesc = $event.detail.imgModalDesc;" x-if="imgModal">
-            <div x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90" x-on:click.away="imgModalSrc = ''" class="p-2 fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center bg-black bg-opacity-75">
-                <div @click.away="imgModal = ''" class="flex flex-col max-w-3xl max-h-full overflow-auto">
+    <div x-data="{ imgModal: false, imgSrc: '' }">
+        <template @lightbox.window="imgModal = true; imgSrc = $event.detail.src;" x-if="imgModal">
+            <div x-transition:enter="transition ease-out duration-300"
+                 x-transition:enter-start="opacity-0 transform scale-90"
+                 x-transition:enter-end="opacity-100 transform scale-100"
+                 x-transition:leave="transition ease-in duration-300"
+                 x-transition:leave-start="opacity-100 transform scale-100"
+                 x-transition:leave-end="opacity-0 transform scale-90"
+                 @click="imgModal = false"
+                 class="p-2 fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center bg-black bg-opacity-75">
+                <div @click.away="imgModal = true" class="flex flex-col max-w-3xl max-h-full overflow-auto">
                     <div class="z-50">
-                        <button @click="imgModal = ''" class="float-right pt-2 pr-2 outline-none focus:outline-none">
+                        <button @click="imgModal = false" class="float-right pt-2 pr-2 outline-none focus:outline-none">
                             <svg class="fill-current text-white " xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
                                 <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
                             </svg>
                         </button>
                     </div>
                     <div class="p-2">
-                        <img :alt="imgModalSrc" class="object-contain h-1/2-screen" :src="imgModalSrc"/>
-                        <p x-text="imgModalDesc" class="text-center text-white"></p>
+                        <img :alt="imgSrc" class="object-contain h-1/2-screen" :src="imgSrc"/>
+                        {{--<p x-text="imgDesc" class="text-center text-white"></p>--}}
                     </div>
                 </div>
             </div>
@@ -59,7 +66,7 @@
             <div class="relative mr-2">
                 <select class="shadow rounded-lg inline-flex items-center bg-white hover:text-blue-500 focus:outline-none focus:shadow-outline text-gray-500 font-semibold py-2 px-2 md:px-4"
                         x-data
-                        x-on:change="window.location.href = '/lang/' + $event.target.value">
+                        @change="window.location.href = '/lang/' + $event.target.value">
                     <option value="es" {{ session('locale') == 'es' ? 'selected' : '' }}>ES</option>
                     <option value="en" {{ session('locale') == 'en' ? 'selected' : '' }}>EN</option>
                 </select>

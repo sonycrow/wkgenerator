@@ -45,16 +45,17 @@ class TableCodex extends Component
     private function loadHeaders(): void
     {
         $this->headers = array(
-            array("key" => "id",      "value" => "ID"),
-            array("key" => "sticker", "value" => "Sticker"),
-            array("key" => "name",    "value" => "Name"),
-            array("key" => "te_icon", "value" => "Type"),
-            array("key" => "atk",     "value" => "Attack"),
-            array("key" => "move",    "value" => "Move"),
-            array("key" => "cost",    "value" => "Cost"),
-            array("key" => "steps",   "value" => "Steps"),
-            array("key" => "faction", "value" => "Faction"),
-            array("key" => "terrain", "value" => "Terrain")
+            array("key" => "id",       "value" => "ID"),
+            array("key" => "sticker",  "value" => "Sticker"),
+            array("key" => "name",     "value" => "Name"),
+            array("key" => "te_icon",  "value" => "Type"),
+            array("key" => "atk",      "value" => "Attack"),
+            array("key" => "move",     "value" => "Move"),
+            array("key" => "cost",     "value" => "Cost"),
+            array("key" => "steps",    "value" => "Steps"),
+            array("key" => "universe", "value" => "Universe"),
+            array("key" => "faction",  "value" => "Faction"),
+            array("key" => "terrain",  "value" => "Terrain")
         );
     }
 
@@ -66,21 +67,23 @@ class TableCodex extends Component
         // Init
         $this->elements = array();
 
+        // Unidades
         foreach (CodexServiceProvider::getUnits() as $item)
         {
-            // TODO Para montar un componente Livewire en el controlador de otro componente, usamos Livewiere::mount
+            // TODO Para montar un componente Livewire en el controlador de otro componente, usamos Livewire::mount
             // Livewire::mount('unit', ['id' => $item['id']])->html(),
 
-            $img  = "resources/units/" . strtolower($item['faction'] . "_" . str_replace(" ", "_", $item['name'])) . "_{$item['id']}.png";
+            $img = "resources/units/{$item['universe']}/" . strtolower($item['faction'] . "_" . str_replace(" ", "_", $item['name'])) . "_{$item['id']}.png";
             $unit = array(
-                "id"      => $item['id'],
+                "id" => $item['id'],
                 "sticker" => file_exists(__DIR__ . "../../../../{$img}") ? "img:" . Vite::asset($img) . ",w:32" : null,
-                "name"    => ucwords($item['name']),
+                "name" => ucwords($item['name']),
                 "te_icon" => !empty($item['terrain']) ? "img:" . Vite::asset("resources/img/mov-{$item['terrain']}.png") . ",w:24" : null,
-                "atk"     => strtoupper($item['atk']),
-                "move"    => $item['move'] ?? null,
-                "cost"    => $item['cost'],
-                "steps"   => $item['steps'],
+                "atk" => strtoupper($item['atk']),
+                "move" => $item['move'] ?? null,
+                "cost" => $item['cost'],
+                "steps" => $item['steps'],
+                "universe" => $item['universe'] == 'wk' ? "Wizard Kings" : "Warhammer 40K",
                 "faction" => ucfirst($item['faction']),
                 "terrain" => !empty($item['terrain']) ? ucfirst($item['terrain']) : null
             );
